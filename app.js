@@ -4,6 +4,7 @@ const morgan = require('morgan');
 require('dotenv').config();
  const UserRoutes=require("./routes/User.route");
  const BlogRoutes=require("./routes/Blog.route");
+ const TestimonialRoutes=require("./routes/Testimonial.route")
 
 const app = express();
 app.use(express.json());
@@ -17,6 +18,7 @@ app.get('/', async (req, res, next) => {
 
  app.use('/auth',UserRoutes)
  app.use('/blog',BlogRoutes);
+ app.use('/testimonial',TestimonialRoutes);
 
 app.use('/api', require('./routes/api.route'));
 
