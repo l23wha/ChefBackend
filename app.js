@@ -6,6 +6,7 @@ require('dotenv').config();
  const BlogRoutes=require("./routes/Blog.route");
  const TestimonialRoutes=require("./routes/Testimonial.route")
  const GalleryRoutes=require("./routes/Gallery.routes");
+ const CuroselRoutes=require("./routes/Curosel.routes");
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -20,6 +21,7 @@ app.get('/', async (req, res, next) => {
  app.use('/blog',BlogRoutes);
  app.use('/testimonial',TestimonialRoutes);
  app.use("/gallery",GalleryRoutes);
+ app.use("/curosel",CuroselRoutes);
 
 app.use('/api', require('./routes/api.route'));
 
