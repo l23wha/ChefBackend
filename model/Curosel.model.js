@@ -16,7 +16,11 @@ const CuroselSchema = new mongoose.Schema({
     image: {
         type: String
     }
-}, { timestamps: true }); // 🔥 auto createdAt & updatedAt
+    ,
+    action:{
+        type:String
+    }
+}, { timestamps: true }); // 
 
 
 
